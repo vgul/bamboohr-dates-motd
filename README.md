@@ -19,7 +19,20 @@ export ICAL_FEEDS="HappyBirday:https://link_to_your_ical_data;Anniversary:http:/
 # the # sign is delimiter for ical feeds
 ```
 
+Line for my crontab
+```sh
+10 08,16,18 * * * vlad source /etc/profile.d/rvm.sh && source ${HOME}/.bamboohr && ruby ${HOME}/bin/bamboohr.rb > /var/cache/bamboohr/report 2>&1
+```
+
+Line for my .bash_profile
+```sh
+
+[ -f /var/cache/bamboohr/report ] && cat /var/cache/bamboohr/report
+
+```
 
 [https://www.bamboohr.com/]: <https://github.com/markdown-it/markdown-it>
 [motd]: <https://wiki.debian.org/motd>
+
+
 
