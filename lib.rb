@@ -77,9 +77,9 @@ def handle_ical(text)
         end
 
       when 'Who\'s Out'
-        #puts summary
+        #puts event
         # Petr Ivanoff (Paid Vacation - 9 days)
-        match = summary.match(/(.*)\s+\(\s*(.*)\s+-\s+(.*)\s+days?\)/)
+        match = summary.match(/(.*)\s+\(\s*(.*)\s+-\s+(.*)\s+(days?|hours?)\)/)
         unless match.nil?
           person, type, days = match.captures
           case type
